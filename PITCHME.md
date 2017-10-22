@@ -26,17 +26,15 @@ https://github.com/stubbornella/oocss/wiki#separate-structure-and-skin
 
 ---
 
-## OOCSS
-
-### 2つの基本理念
-#### Separate structure and skin
+## 2つの基本理念
+### Separate structure and skin
 https://github.com/stubbornella/oocss/wiki#separate-structure-and-skin
 
 基本構造とバリエーションで別クラスに切り出す。
 マルチクラスで指定することで、同じスタイルを何度も書くことを防ぐ。
 タグレベルで書くよりも、classで指定しておけば、新しいタグが実用的になった時にもスタイルの調整するんじゃなくて、classの付与で対応できるよね。
 
-#### Separate container and content
+### Separate container and content
 https://github.com/stubbornella/oocss/wiki#separate-container-and-content
 
 コンテナとコンテンツを分離。場所に依存しないセレクタを書く。
@@ -47,3 +45,18 @@ h2.category のような感じ
 上書きしたスタイルをもう一回戻すために上書きするとかしなくてすむ
 
 ---
+
+## SMACSS
+https://smacss.com/ja
+
+---
+
+## カテゴライズ
+根底にある考え方は「カテゴライズ」
+```
+1. ベース
+2. レイアウト
+3. モジュール
+4. 状態(ステート)
+5. テーマ
+```
