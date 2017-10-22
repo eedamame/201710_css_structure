@@ -80,10 +80,10 @@ https://smacss.com/ja
 のように、タグ構造に依存してしまってるのは変更があることを考えるとツライ。  
 まず、起点となるdivからスタイルをできるように、classをつける。 `.pod`
 次に、コンテンツ部分の ul は ol の場合もあるかもしれないし、単純に div かもしれない。  
-なので、共通のclass `.pod-body` をつけておくとタグに依存しない指定になって柔軟性が増す。
+なので、共通のclass `.pod-body` をつけておくとタグに依存しない指定になって柔軟性が増す。  
 
-（ここでは全部のタグにclassをつけてclassだらけにする必要はないと言っているが、
-h3やliにもclassつけてあげたほうが詳細度あがらずにいいんじゃないかなと思う。）
+（ここでは全部のタグにclassをつけてclassだらけにする必要はないと言っているが、  
+h3やliにもclassつけてあげたほうが詳細度あがらずにいいんじゃないかなと思う。）  
 
 ---
 
@@ -114,8 +114,8 @@ Block__Element--Modifier
 ---
 
 ## MCSS
-http://operatino.github.io/MCSS/en/
-http://operatino.github.io/MCSS/ja/
+http://operatino.github.io/MCSS/en/  
+http://operatino.github.io/MCSS/ja/  
 マルチレイヤーCSS
 ```
 - Foundation
@@ -139,7 +139,38 @@ http://operatino.github.io/MCSS/ja/
 
 cosmetic.css
 ```
-先のレイヤーのスタイルから、後のレイヤーのスタイルを上書かない。
-（たとえばbaseレイヤーからprojectやcomseticレイヤーのスタイルは上書かない）
+先のレイヤーのスタイルから、後のレイヤーのスタイルを上書かない。  
+（たとえばbaseレイヤーからprojectやcomseticレイヤーのスタイルは上書かない）  
+
+---
+
+## FLOCSS
+```
+- Foundation
+- Layout
+  - Layoutの要素は基本的に唯一の存在であるので、IDセレクタを使うことを推奨。
+- Object
+  - 基本的にすべてコンポーネント
+  - ただし、階層概念を持っていて、レイヤー間のコンポーネントの上書きのルールがある
+  - Component
+    - 汎用性が高く、再利用が可能。
+  - Project
+    - Componentと、それに該当しない要素によって構成されるものを定義。
+    - プロジェクトで使われるページを構成する要素のほとんどがこのレイヤーのコンポーネントになる。
+  - Utility
+    - Component/Project のModifierでの解決が難しい／適切でない場合。及び、わずかなスタイル調整のための便利クラスなど。
+```
+---
+
+## ECSS
 
 
+---
+
+# 私の気持ち
+
+難しくしたくない。  
+必要なのは、
+
+- どこに書いてあるのか、書くべきなのかがわかりやすいこと
+- 
