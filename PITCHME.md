@@ -148,17 +148,10 @@ https://github.com/hiloki/flocss
 
 - Foundation
 - Layout
-  - Layoutの要素は基本的に唯一の存在であるので、IDセレクタを使うことを推奨。
 - Object
-  - 基本的にすべてコンポーネント
-  - ただし、階層概念を持っていて、レイヤー間のコンポーネントの上書きのルールがある
   - Component
-    - 汎用性が高く、再利用が可能。
   - Project
-    - Componentと、それに該当しない要素によって構成されるものを定義。
-    - プロジェクトで使われるページを構成する要素のほとんどがこのレイヤーのコンポーネントになる。
   - Utility
-    - Component/Project のModifierでの解決が難しい／適切でない場合。及び、わずかなスタイル調整のための便利クラスなど。
 ---
 
 ## ECSS
