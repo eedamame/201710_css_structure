@@ -1,6 +1,6 @@
 # 主要css設計のざっくりまとめと、私の気持ち
 
-design Team 橘
+橘
 
 ---
 
@@ -22,7 +22,8 @@ https://github.com/stubbornella/oocss/wiki#separate-structure-and-skin
 - Heavy reuse of CSS code, so less CSS code needed
 - To a lesser degree, fewer repaints and layout calculations on the part of the browser.
 再利用するから、コード量自体少ない。ページごとにキャッシュを使える
-再描画、再計算せずに計算された数値を使いまわすことができる。
+再描画、再計算せずに計算された数値を使いまわすことができる。  
+レゴブロックのようにパーツを組み合わせて構築していく。
 
 ---
 
@@ -38,7 +39,7 @@ https://github.com/stubbornella/oocss/wiki#separate-structure-and-skin
 
 基本構造とバリエーションで別クラスに切り出す。  
 マルチクラスで指定することで、同じスタイルを何度も書くことを防ぐ。  
-タグレベルで書くよりも、classで指定しておけば、新しいタグが実用的になった時にもスタイルの調整するんじゃなくて、classの付与で対応できるよね。
+**タグレベルで書くよりも、classで指定**しておけば、新しいタグが実用的になった時にもスタイルの調整するんじゃなくて、classの付与で対応できるよね。
 
 ---
 
@@ -99,13 +100,11 @@ BEMはBlock, Element, Modifier の略。
 コンポーネントのベースになるクラス
 
 ### Element
-Blockを構成する要素
+Blockを構成する要素  
 titleとか、btnとかかな
 
 ### Modifier
 Block、Elementのバージョン違い
-
----
 
 ### MindBEMding
 
@@ -145,6 +144,7 @@ cosmetic.css
 ---
 
 ## FLOCSS
+https://github.com/hiloki/flocss
 ```
 - Foundation
 - Layout
@@ -163,7 +163,19 @@ cosmetic.css
 ---
 
 ## ECSS
+Enduring CSS  
+http://ecss.io/  
 
+- 抽象化を避ける
+- 重複を許容する
+
+---
+
+### property, value の繰り返しを許容する
+
+- 冗長になってファイルサイズも増えるが、cssの多少の増減がパフォーマンスへ致命的な影響を与えるケースはまずない。
+- 似たようなデザインであっても、違うUIパーツとしてスタイルを書く。
+- それによって、影響範囲が特定できて、追加も安心。不要になった場合にはまるっと削除できる。
 
 ---
 
@@ -173,4 +185,8 @@ cosmetic.css
 必要なのは、
 
 - どこに書いてあるのか、書くべきなのかがわかりやすいこと
-- 
+- コードの影響範囲がわかりやすいこと （削除しやすい／追加しやすい）
+- 初見でもだいたいこんな感じかなと始められること
+
+- コードの影響範囲がわかりやすいこと
+- コードの影響範囲がわかりやすいこと
