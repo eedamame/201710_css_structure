@@ -115,7 +115,7 @@ Block__Element--Modifier
 ## MCSS
 http://operatino.github.io/MCSS/en/  
 http://operatino.github.io/MCSS/ja/  
-マルチレイヤーCSS
+マルチレイヤーCSS  
 ```
 - Foundation
 - Base
@@ -145,7 +145,7 @@ cosmetic.css
 
 ## FLOCSS
 https://github.com/hiloki/flocss
-```
+
 - Foundation
 - Layout
   - Layoutの要素は基本的に唯一の存在であるので、IDセレクタを使うことを推奨。
@@ -159,7 +159,6 @@ https://github.com/hiloki/flocss
     - プロジェクトで使われるページを構成する要素のほとんどがこのレイヤーのコンポーネントになる。
   - Utility
     - Component/Project のModifierでの解決が難しい／適切でない場合。及び、わずかなスタイル調整のための便利クラスなど。
-```
 ---
 
 ## ECSS
