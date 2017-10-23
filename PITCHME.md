@@ -74,7 +74,7 @@ h3やliにもclassつけてあげたほうが詳細度あがらずにいいん�
 
 ## BEM
 
-http://getbem.com/
+http://getbem.com/  
 BEMはBlock, Element, Modifier の略。  
 オブジェクト、コンポーネントをこの3つに分類して考える。
 
@@ -90,6 +90,8 @@ titleとか、btnとかかな
 ### Modifier
 Block、Elementのバージョン違い
 
+---
+
 ### MindBEMding
 
 Block__Element--Modifier
@@ -99,6 +101,7 @@ Block__Element--Modifier
 ## MCSS
 http://operatino.github.io/MCSS/en/  
 http://operatino.github.io/MCSS/ja/  
+
 マルチレイヤーCSS  
 ```
 - Foundation
@@ -167,6 +170,43 @@ http://ecss.io/
 - コードの影響範囲がわかりやすいこと
 - コードの影響範囲がわかりやすいこと
 
+---
 
-OOCSSのように、タグではなくclassベースでスタイルの
-指定をしていき、
+- **OOCSS**のように、タグではなくclassベースで、構造に依存しないようにスタイルの指定をしていき、  
+- **SMACSS**のように、カテゴライズをして、適切なカテゴリに記述することで管理しやすくして、  
+- **BEM**のように、class名のルール付をしていくことで、自然とコンポーネント指向なclass名の設計をして、  
+- **MCSS**のように、読み込み順の制御でレイヤー間の影響範囲をわかりやすくし、  
+- **FLOCSS**のように、細分化したルールでかっちりやればうまくいくのではと思いつつ難しいので諦めて、  
+- **ECSS**のように、可能な限り、影響範囲を閉じ込めたカスケーディング／汎用パーツ化しないようにすることで、
+
+---
+
+今のところうまくいっているように思っています。
+
+---
+
+## ファイル構成
+
+```
+- scssフォルダ
+  - styles.scss : エントリポイント。@importのみする。
+  - _setting.scss : 変数、mixinなど。mixinが増える場合は `abstract.scss` を作る時も。
+  - _layout.scss : その名の通り、大枠のレイアウトに関するcss。
+  - _module.scss : ECSS的に〜とはいいつつ、ボタン／タイトルなどのそれだけで成り立つミニマムなものはモジュール化したい
+  - _page.scss : 個別ページ用の指定。ここから@importする。この下は、極力ECSS的なアプローチをとる。
+    - _top.scss : トップページ用
+    - _about.scss : 会社概要用〜〜などなど
+```
+
+---
+
+## その他気をつけていること
+
+個人の好みです。が、参考まで。
+
+- よっぽどわかりやすいものでなければmixinにしない
+  - clearfixとか、mediaqueryとかはOK。
+- extendは使わない。
+  - 書くコード量は減るが、読む時に追いかけるのが極端に面倒になる。
+
+
