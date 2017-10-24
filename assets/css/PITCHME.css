@@ -1,6 +1,7 @@
 html.eedamame-section,
-html.eedamame-section body {
-  font-size: 26px;
+html.eedamame-section body,
+html.eedamame-section .reveal {
+  font-size: 30px;
 }
 
 .reveal .slides h1 {
@@ -20,7 +21,7 @@ html.eedamame-section body {
 }
 
 .reveal .slides p {
-  font-size: .8rem;
+  font-size: .9rem;
   line-height: 1.7;
 }
 
