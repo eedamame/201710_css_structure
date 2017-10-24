@@ -24,5 +24,8 @@ html.eedamame-section .reveal {
   font-size: .9rem;
   line-height: 1.7;
 }
+.reveal .slides pre {
+  font-size: .9rem;
+}
 
 
