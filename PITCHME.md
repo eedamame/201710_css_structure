@@ -156,6 +156,19 @@ http://ecss.io/
 - 似たようなデザインであっても、違うUIパーツとしてスタイルを書く。
 - それによって、影響範囲が特定できて、追加も安心。不要になった場合にはまるっと削除できる。
 
++++
+
+#### 命名規則
+```
+namespace-ModuleName_ChildNode-variant
+namespace-ComponentName_ChildNode-variant
+modulename-ComponentName_ChildNode-variant
+```
+
+BEMに似てる。  
+namespaceとvariantは小文字だけれどそれ以外はCamelCase。  
+namespaceやmodulenameでコンテキストを分けて、その中で重複しないこと。
+
 ---
 
 # 私の気持ち
@@ -203,6 +216,12 @@ http://ecss.io/
   - clearfixとか、mediaqueryとかはOK。
 - extendは使わない。
   - 書くコード量は減るが、読む時に追いかけるのが極端に面倒になる。
+- 長いclass名はまったく問題ない
+  - 書く時のコストはそれほど大したことない。
+  - 読む時のコストが大きい。そこを軽減するように書く。
+- すべてclass名に対して指定する。マルチクラスも例外として使う。
+  - タグ名やid属性はcssからは使用しない。
+  - いちいち詳細度で悩むというケースをなくす。
 
 ---
 
